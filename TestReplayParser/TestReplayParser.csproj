@@ -25,6 +25,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="recs-extra\de-ai-ffffffff.aoe2record">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="recs-extra\de-ai-names.aoe2record">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="recs-extra\de-float.aoe2record">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="recs\aoc-1.0.mgx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

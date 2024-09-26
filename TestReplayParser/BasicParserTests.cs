@@ -38,9 +38,9 @@ namespace TestReplayParser
         }
 
         [TestMethod]
-        public void TestRecOld1()
+        public void TestRecFloatCompare()
         {
-            Aoe2ReplayHeaderBasic header = Aoe2RecordParser.BasicParse("C:\\Users\\calle\\Games\\Age of Empires 2 DE\\76561198009420968\\savegame\\MP Replay v101.101.56005.0 @2021.12.25 004616 (2).aoe2record");
+            Aoe2ReplayHeaderBasic header = Aoe2RecordParser.BasicParse("recs-extra\\de-float.aoe2record");
             Assert.IsNull(header.Datetime);
             Assert.AreEqual(8, header.Players.Count);
 
@@ -54,9 +54,9 @@ namespace TestReplayParser
         }
 
         [TestMethod]
-        public void TestRecOld2()
+        public void TestRecAiNames()
         {
-            Aoe2ReplayHeaderBasic header = Aoe2RecordParser.BasicParse("C:\\Users\\calle\\Games\\Age of Empires 2 DE\\76561198009420968\\savegame\\MP Replay v101.102.28520.0 @2023.09.25 235108 (1).aoe2record");
+            Aoe2ReplayHeaderBasic header = Aoe2RecordParser.BasicParse("recs-extra\\de-ai-names.aoe2record");
             Assert.IsNull(header.Datetime);
             Assert.AreEqual(2, header.Players.Count);
 
@@ -71,9 +71,9 @@ namespace TestReplayParser
 
 
         [TestMethod]
-        public void TestRecOld3()
+        public void TestRecAiFfffffff()
         {
-            Aoe2ReplayHeaderBasic header = Aoe2RecordParser.BasicParse("C:\\Users\\calle\\Games\\Age of Empires 2 DE\\76561198009420968\\savegame\\MP Replay v101.102.46236.0 @2024.05.03 214225 (1).aoe2record");
+            Aoe2ReplayHeaderBasic header = Aoe2RecordParser.BasicParse("recs-extra\\de-ai-ffffffff.aoe2record");
             Assert.AreEqual(header.Datetime, new DateTime(638503585450000000));
             Assert.AreEqual(3, header.Players.Count);
 
